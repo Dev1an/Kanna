@@ -24,7 +24,11 @@ SOFTWARE.
 */
 import Foundation
 
+#if os(Linux)
 import libxmlKanna
+#else
+import libxml2
+#endif
 
 /**
 libxmlHTMLNode

@@ -25,7 +25,11 @@ SOFTWARE.
 import Foundation
 import CoreFoundation
 
+#if os(Linux)
 import libxmlKanna
+#else
+import libxml2
+#endif
 
 extension String.Encoding {
     var IANACharSetName: String? {
