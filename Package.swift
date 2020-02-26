@@ -33,7 +33,9 @@ let targets: [Target] = [
 				"Sources/Info.plist",
 				"Sources/Kanna.h",
 				"Tests/KannaTests/Data"
-			]),
+			],
+            linkerSettings: [.linkedLibrary("xml2")]
+	),
 	.testTarget(name: "KannaTests",
 				dependencies: ["Kanna"]
 			)
